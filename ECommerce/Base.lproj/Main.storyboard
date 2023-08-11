@@ -161,10 +161,10 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <connections>
-                                            <outlet property="bgView" destination="Ra9-8q-kbh" id="SlI-t6-hm9"/>
-                                            <outlet property="iconImageVIew" destination="3e3-cp-aW5" id="EDe-h2-F48"/>
-                                            <outlet property="titleLabel" destination="zCn-Dp-7i1" id="0XA-m2-Lpe"/>
-                                            <outlet property="totalProductLabel" destination="1xf-je-Vj0" id="Boa-mD-Z3G"/>
+                                            <outlet property="bgView" destination="Ra9-8q-kbh" id="BBX-Ui-j2q"/>
+                                            <outlet property="iconImageVIew" destination="3e3-cp-aW5" id="yKT-aJ-N0Z"/>
+                                            <outlet property="titleLabel" destination="zCn-Dp-7i1" id="XGl-PX-ooH"/>
+                                            <outlet property="totalProductLabel" destination="1xf-je-Vj0" id="b4W-YP-aOv"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -184,7 +184,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="E1B-Mv-fbF"/>
                     <connections>
-                        <outlet property="tableView" destination="9Oi-D4-P7R" id="01M-z0-Dsw"/>
+                        <outlet property="tableView" destination="9Oi-D4-P7R" id="SEi-g8-Bid"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMR-Av-Hot" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
