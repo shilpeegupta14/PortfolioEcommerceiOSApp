@@ -11,7 +11,7 @@ import UIKit
 class CEnumClass : NSObject {
     
     static let sharedEnum = CEnumClass()
-    let cateArr = ["New Arrivals", "Clothes", "Bags", "Shoes", "Electronics", "Jevelry"]
+    let cateArr = ["New Arrivals", "Clothes", "Bags", "Shoes", "Electronics", "Jewelry"]
     let totalItemArr = ["111 Product", "235 Product", "33 Product", "222 Product", "455 Product", "383 Product"]
     let cateIconArr = ["cart", "tshirt", "bag", "shoeprints.fill", "lightbulb.2", "circle.dotted"]
     // add here links like Base URl and others
