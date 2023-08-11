@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Sign UpVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ECommerce" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignUpVC" customModule="ECommerce" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -107,6 +107,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up">
                                     <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signupButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ljz-ap-bdX"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sZO-0p-5wE">
                                 <rect key="frame" x="16" y="709" width="25" height="25"/>
@@ -160,6 +163,16 @@
                             <constraint firstItem="WPK-Rv-OhR" firstAttribute="top" secondItem="JBK-hc-q7U" secondAttribute="bottom" constant="5" id="yNL-Dy-cvZ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="WPK-Rv-OhR" id="lf1-RP-SI9"/>
+                        <outlet property="emailTextField" destination="uX4-Rp-ndK" id="TVB-DD-YTz"/>
+                        <outlet property="passwordTextField" destination="ufh-Dd-k11" id="Kbb-DN-pWX"/>
+                        <outlet property="termsConditionsCheckbox" destination="sZO-0p-5wE" id="3Nv-od-Z7c"/>
+                        <outlet property="usernameAvailableIndicator" destination="gGB-Nm-QRg" id="rtj-Jy-oaf"/>
+                        <outlet property="usernameTextField" destination="56l-oc-OOL" id="N0n-KS-1gB"/>
+                        <outlet property="viewConfirmPasswordIcon" destination="ct9-DB-jak" id="qlN-pM-wGV"/>
+                        <outlet property="viewPasswordIcon" destination="82D-P4-ftP" id="Lft-O4-Svf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
