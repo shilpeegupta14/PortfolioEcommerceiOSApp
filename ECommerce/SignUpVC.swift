@@ -30,9 +30,17 @@ class SignUpVC: UIViewController {
     var isPasswordVisible = false
     var isConfirmPasswordVisible = false
     
+    var validEmailEntered = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDefaultUI()
+        
+        //delegate declaration
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        confirmPasswordTextField.delegate = self
+        
         // Enable toggle functionality
         let checkboxTapGesture = UITapGestureRecognizer(target: self, action: #selector(termsCheckboxTapped))
         termsConditionsCheckbox.isUserInteractionEnabled = true
@@ -46,28 +54,31 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func signupButtonTapped(_ sender: UIButton) {
-        if emailTextField.text != "" {
-            let emailValidated = validateEmail(emailTextField.text!)
+        let emailValidated = validateEmail(emailTextField.text ?? "")
+        
+        if emailValidated {
+            validEmailEntered = true
+        } else {
+            emailTextField.backgroundColor = UIColor.red.withAlphaComponent(0.5)
         }
         
+//        if usernameTextField != "" &&
         
-        if usernameTextField != "" && 
-        
-        if(passwordTextField.text != confirmPasswordTextField.text){
-            
-            
-            let alertController = UIAlertController(title: "Sign Up Failed", message: "Sorry, your Passwords were not matching.", preferredStyle: .alert)
-            
-            
-            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
-                // ...
-            }
-            alertController.addAction(OKAction)
-            
-            self.present(alertController, animated: true) {
-                // ...
-            }
-        }
+//        if(passwordTextField.text != confirmPasswordTextField.text){
+//
+//
+//            let alertController = UIAlertController(title: "Sign Up Failed", message: "Sorry, your Passwords were not matching.", preferredStyle: .alert)
+//
+//
+//            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
+//                // ...
+//            }
+//            alertController.addAction(OKAction)
+//
+//            self.present(alertController, animated: true) {
+//                // ...
+//            }
+//        }
         
     }
     
@@ -120,5 +131,30 @@ extension SignUpVC {
     func updateEyeIcon1() {
         let imageName = isConfirmPasswordVisible ? "ic_hidePassword" : "ic_showPassword"
         viewConfirmPasswordIcon.image = UIImage(named: imageName)
+    }
+}
+
+extension SignUpVC: UITextFieldDelegate {
+    
+    //error backgound color to email text field
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == emailTextField {
+            textField.backgroundColor = .clear
+        } else if textField == passwordTextField || textField == confirmPasswordTextField {
+                textField.backgroundColor = .white // Reset background color
+                    textField.layer.borderColor = UIColor.lightGray.cgColor // Reset border color
+            
+        }
+    }
+    
+    //password check
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if textField == confirmPasswordTextField {
+            // Check if passwords match
+            let passwordsMatch = passwordTextField.text == confirmPasswordTextField.text
+
+            textField.backgroundColor = passwordsMatch ? .white : UIColor.red.withAlphaComponent(0.5)
+            confirmPasswordTextField.layer.borderColor = passwordsMatch ? UIColor.lightGray.cgColor : UIColor.red.cgColor
+        }
     }
 }
