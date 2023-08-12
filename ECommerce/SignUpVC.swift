@@ -6,6 +6,7 @@
 //  Modified by Aditya Vyavahare
 
 import UIKit
+import Security
 
 class SignUpVC: UIViewController {
     
@@ -54,34 +55,23 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func signupButtonTapped(_ sender: UIButton) {
-        let emailValidated = validateEmail(emailTextField.text ?? "")
-        
-        if emailValidated {
-            validEmailEntered = true
-        } else {
-            emailTextField.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+        guard let username = usernameTextField.text, !username.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty,
+              let email = emailTextField.text, !email.isEmpty else {
+            // Handle case where required fields are empty
+            return
         }
         
-//        if usernameTextField != "" &&
-        
-//        if(passwordTextField.text != confirmPasswordTextField.text){
-//
-//
-//            let alertController = UIAlertController(title: "Sign Up Failed", message: "Sorry, your Passwords were not matching.", preferredStyle: .alert)
-//
-//
-//            let OKAction = UIAlertAction(title: "OK", style: .default) { (action) in
-//                // ...
-//            }
-//            alertController.addAction(OKAction)
-//
-//            self.present(alertController, animated: true) {
-//                // ...
-//            }
-//        }
-        
+        // Save username and password in Keychain
+        do {
+            try KeychainService.savePassword(password, forAccount: username)
+            print("Password saved successfully.")
+        } catch {
+            // Handle error saving to Keychain
+            print("Error saving to Keychain: \(error)")
+            return
+        }
     }
-    
 }
 
 extension SignUpVC {
@@ -107,7 +97,6 @@ extension SignUpVC {
     }
     func updateCheckboxState() {
         let imageName = isTermsChecked ? "ic_checkboxSelected" : "ic_checkboxUnselected"
-        //        let toggleState =
         termsConditionsCheckbox.image = UIImage(named: imageName)
     }
     
@@ -136,23 +125,31 @@ extension SignUpVC {
 
 extension SignUpVC: UITextFieldDelegate {
     
-    //error backgound color to email text field
+    //clear error indication when editing
     func textFieldDidBeginEditing(_ textField: UITextField) {
         if textField == emailTextField {
             textField.backgroundColor = .clear
-        } else if textField == passwordTextField || textField == confirmPasswordTextField {
-                textField.backgroundColor = .white // Reset background color
-                    textField.layer.borderColor = UIColor.lightGray.cgColor // Reset border color
-            
+        }
+        if textField == passwordTextField || textField == confirmPasswordTextField {
+            textField.backgroundColor = .white // Reset background color
+            textField.layer.borderColor = UIColor.lightGray.cgColor // Reset border color
         }
     }
     
-    //password check
+    //show invalid input indications
     func textFieldDidEndEditing(_ textField: UITextField) {
+        let emailValidated = validateEmail(emailTextField.text ?? "")
+        
+        if emailValidated {
+            validEmailEntered = true
+        } else {
+            emailTextField.backgroundColor = UIColor.red.withAlphaComponent(0.5)
+        }
+        
         if textField == confirmPasswordTextField {
             // Check if passwords match
             let passwordsMatch = passwordTextField.text == confirmPasswordTextField.text
-
+            
             textField.backgroundColor = passwordsMatch ? .white : UIColor.red.withAlphaComponent(0.5)
             confirmPasswordTextField.layer.borderColor = passwordsMatch ? UIColor.lightGray.cgColor : UIColor.red.cgColor
         }
