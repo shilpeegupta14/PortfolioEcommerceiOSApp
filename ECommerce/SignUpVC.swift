@@ -27,11 +27,10 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var signupButton: UIButton!
     
     // Keeps track of the toggle state
-    var isUsernameValid = false
     var isTermsChecked = false
     var isPasswordVisible = false
     var isConfirmPasswordVisible = false
-    var ValidPasswordEntered = false
+    
     var validEmailEntered = false
     
     override func viewDidLoad() {
@@ -56,36 +55,21 @@ class SignUpVC: UIViewController {
     }
     
     @IBAction func signupButtonTapped(_ sender: UIButton) {
+        guard let username = usernameTextField.text, !username.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty,
+              let email = emailTextField.text, !email.isEmpty else {
+            // Handle case where required fields are empty
+            return
+        }
         
-        //username check will be included later once backend is integrated
-        if isTermsChecked == true && validEmailEntered == true && ValidPasswordEntered == true {
-            //fetch values to save to keychain
-            guard let username = usernameTextField.text, !username.isEmpty,
-                  let password = passwordTextField.text, !password.isEmpty,
-                  let email = emailTextField.text, !email.isEmpty else {
-                // Handle case where required fields are empty
-                return
-            }
-            // Save username and password in Keychain
-            do {
-                try KeychainService.savePassword(password, forAccount: username)
-                print("Password saved successfully.")
-            } catch {
-                // Handle error saving to Keychain
-                print("Error saving to Keychain: \(error)")
-                return
-            }
-        } else {
-            termsConditionsCheckbox.backgroundColor = UIColor.red.withAlphaComponent(0.5)
-            
-            let alertController = UIAlertController(title: "Signup Failed", message: "Please enter valid information.", preferredStyle: .alert)
-            // Add actions (buttons) to the alert
-            let okAction = UIAlertAction(title: "Got it!", style: .default) { _ in
-                // Handle OK button action
-            }
-            alertController.addAction(okAction)
-            // Present the alert controller
-            present(alertController, animated: true, completion: nil)
+        // Save username and password in Keychain
+        do {
+            try KeychainService.savePassword(password, forAccount: username)
+            print("Password saved successfully.")
+        } catch {
+            // Handle error saving to Keychain
+            print("Error saving to Keychain: \(error)")
+            return
         }
     }
 }
@@ -108,7 +92,6 @@ extension SignUpVC {
     
     //MARK: toggle logic
     @objc func termsCheckboxTapped() {
-        termsConditionsCheckbox.backgroundColor = .clear
         isTermsChecked.toggle()
         updateCheckboxState()
     }
@@ -144,14 +127,9 @@ extension SignUpVC: UITextFieldDelegate {
     
     //clear error indication when editing
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if textField == usernameTextField {
-            textField.backgroundColor = .clear
-        }
-        
         if textField == emailTextField {
             textField.backgroundColor = .clear
         }
-        
         if textField == passwordTextField || textField == confirmPasswordTextField {
             textField.backgroundColor = .white // Reset background color
             textField.layer.borderColor = UIColor.lightGray.cgColor // Reset border color
@@ -160,10 +138,6 @@ extension SignUpVC: UITextFieldDelegate {
     
     //show invalid input indications
     func textFieldDidEndEditing(_ textField: UITextField) {
-        if usernameTextField.text == "" {
-            usernameTextField.backgroundColor = UIColor.red.withAlphaComponent(0.5)
-        }
-
         let emailValidated = validateEmail(emailTextField.text ?? "")
         
         if emailValidated {
@@ -175,15 +149,7 @@ extension SignUpVC: UITextFieldDelegate {
         if textField == confirmPasswordTextField {
             // Check if passwords match
             let passwordsMatch = passwordTextField.text == confirmPasswordTextField.text
-            if passwordsMatch == true {
-                let passwordValidated = validatePassword(mypassword: confirmPasswordTextField.text ?? "")
-                if passwordValidated {
-                    ValidPasswordEntered = true
-                    print("PASSWORD VALID")
-                } else {
-                    ValidPasswordEntered = false
-                }
-            }
+            
             textField.backgroundColor = passwordsMatch ? .white : UIColor.red.withAlphaComponent(0.5)
             confirmPasswordTextField.layer.borderColor = passwordsMatch ? UIColor.lightGray.cgColor : UIColor.red.cgColor
         }
