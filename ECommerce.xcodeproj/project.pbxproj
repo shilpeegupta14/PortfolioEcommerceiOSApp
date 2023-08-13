@@ -7,33 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E6C171A72A88AB4B00CC09F8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C171A62A88AB4B00CC09F8 /* HomeViewController.swift */; };
-		E6C171A92A88AB7B00CC09F8 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C171A82A88AB7B00CC09F8 /* CartViewController.swift */; };
-		E6C171AB2A88AB8F00CC09F8 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C171AA2A88AB8F00CC09F8 /* NotificationsViewController.swift */; };
-		E6C171AD2A88AB9C00CC09F8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C171AC2A88AB9C00CC09F8 /* ProfileViewController.swift */; };
-		E6C171AF2A88ABB400CC09F8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C171AE2A88ABB400CC09F8 /* BaseViewController.swift */; };
-		E6C171B12A88AC0800CC09F8 /* CEnumClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C171B02A88AC0800CC09F8 /* CEnumClass.swift */; };
-		E6C171B32A88AC2A00CC09F8 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6C171B22A88AC2A00CC09F8 /* CategoryCell.swift */; };
+
 		E6DF688F2A823827006A925A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DF688E2A823827006A925A /* AppDelegate.swift */; };
 		E6DF68912A823827006A925A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DF68902A823827006A925A /* SceneDelegate.swift */; };
-		E6DF68932A823827006A925A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DF68922A823827006A925A /* ViewController.swift */; };
+		E6DF68932A823827006A925A /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DF68922A823827006A925A /* SignUpVC.swift */; };
 		E6DF68962A823827006A925A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6DF68942A823827006A925A /* Main.storyboard */; };
 		E6DF68982A823829006A925A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6DF68972A823829006A925A /* Assets.xcassets */; };
 		E6DF689B2A823829006A925A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6DF68992A823829006A925A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E6C171A62A88AB4B00CC09F8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		E6C171A82A88AB7B00CC09F8 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
-		E6C171AA2A88AB8F00CC09F8 /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
-		E6C171AC2A88AB9C00CC09F8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		E6C171AE2A88ABB400CC09F8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		E6C171B02A88AC0800CC09F8 /* CEnumClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CEnumClass.swift; sourceTree = "<group>"; };
-		E6C171B22A88AC2A00CC09F8 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+
 		E6DF688B2A823827006A925A /* ECommerce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ECommerce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6DF688E2A823827006A925A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6DF68902A823827006A925A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E6DF68922A823827006A925A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E6DF68922A823827006A925A /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		E6DF68952A823827006A925A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E6DF68972A823829006A925A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E6DF689A2A823829006A925A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -45,17 +33,46 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				107DE14EA87275CFA2E947F3 /* Pods_ECommerce.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09CFE2A2B3085E469A9AF210 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD82FB539FBB069BB650FB4B /* Pods_ECommerce.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48EB4FB02A875A7F009A0F5B /* Support files */ = {
+			isa = PBXGroup;
+			children = (
+				48EB4FB12A875A90009A0F5B /* Utilities.swift */,
+				48EB4FB72A87B43B009A0F5B /* KeychainServiceManager.swift */,
+			);
+			name = "Support files";
+			sourceTree = "<group>";
+		};
+		9C5B49F67C6E6253D98E911B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95B01AFE17A31A7FFEA4C416 /* Pods-ECommerce.debug.xcconfig */,
+				0BA3E70C6A097ECC809DB747 /* Pods-ECommerce.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E6DF68822A823827006A925A = {
 			isa = PBXGroup;
 			children = (
 				E6DF688D2A823827006A925A /* ECommerce */,
 				E6DF688C2A823827006A925A /* Products */,
+				9C5B49F67C6E6253D98E911B /* Pods */,
+				09CFE2A2B3085E469A9AF210 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,17 +89,11 @@
 			children = (
 				E6DF688E2A823827006A925A /* AppDelegate.swift */,
 				E6DF68902A823827006A925A /* SceneDelegate.swift */,
-				E6DF68922A823827006A925A /* ViewController.swift */,
-				E6C171A62A88AB4B00CC09F8 /* HomeViewController.swift */,
-				E6C171A82A88AB7B00CC09F8 /* CartViewController.swift */,
-				E6C171AA2A88AB8F00CC09F8 /* NotificationsViewController.swift */,
-				E6C171AC2A88AB9C00CC09F8 /* ProfileViewController.swift */,
-				E6C171AE2A88ABB400CC09F8 /* BaseViewController.swift */,
-				E6C171B02A88AC0800CC09F8 /* CEnumClass.swift */,
-				E6C171B22A88AC2A00CC09F8 /* CategoryCell.swift */,
+
 				E6DF68942A823827006A925A /* Main.storyboard */,
 				E6DF68972A823829006A925A /* Assets.xcassets */,
 				E6DF68992A823829006A925A /* LaunchScreen.storyboard */,
+				48EB4FB02A875A7F009A0F5B /* Support files */,
 				E6DF689C2A823829006A925A /* Info.plist */,
 			);
 			path = ECommerce;
@@ -95,9 +106,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E6DF689F2A823829006A925A /* Build configuration list for PBXNativeTarget "ECommerce" */;
 			buildPhases = (
+				46759141BB34174D67A52329 /* [CP] Check Pods Manifest.lock */,
 				E6DF68872A823827006A925A /* Sources */,
 				E6DF68882A823827006A925A /* Frameworks */,
 				E6DF68892A823827006A925A /* Resources */,
+				5EFFB90B138CC3920247A003 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -154,21 +167,56 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		46759141BB34174D67A52329 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ECommerce-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5EFFB90B138CC3920247A003 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ECommerce/Pods-ECommerce-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ECommerce/Pods-ECommerce-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ECommerce/Pods-ECommerce-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E6DF68872A823827006A925A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E6DF68932A823827006A925A /* ViewController.swift in Sources */,
+				E6DF68932A823827006A925A /* SignUpVC.swift in Sources */,
 				E6DF688F2A823827006A925A /* AppDelegate.swift in Sources */,
-				E6C171A92A88AB7B00CC09F8 /* CartViewController.swift in Sources */,
-				E6C171B12A88AC0800CC09F8 /* CEnumClass.swift in Sources */,
-				E6C171AB2A88AB8F00CC09F8 /* NotificationsViewController.swift in Sources */,
-				E6C171AD2A88AB9C00CC09F8 /* ProfileViewController.swift in Sources */,
-				E6C171AF2A88ABB400CC09F8 /* BaseViewController.swift in Sources */,
-				E6DF68912A823827006A925A /* SceneDelegate.swift in Sources */,
-				E6C171A72A88AB4B00CC09F8 /* HomeViewController.swift in Sources */,
-				E6C171B32A88AC2A00CC09F8 /* CategoryCell.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,11 +358,13 @@
 		};
 		E6DF68A02A823829006A925A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95B01AFE17A31A7FFEA4C416 /* Pods-ECommerce.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 63N9M44LL4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ECommerce/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -327,7 +377,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Aditya.ECommerce;
+				PRODUCT_BUNDLE_IDENTIFIER = com.portfolio.ECommerce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -340,11 +390,13 @@
 		};
 		E6DF68A12A823829006A925A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0BA3E70C6A097ECC809DB747 /* Pods-ECommerce.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 63N9M44LL4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ECommerce/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -357,7 +409,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.Aditya.ECommerce;
+				PRODUCT_BUNDLE_IDENTIFIER = com.portfolio.ECommerce;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
