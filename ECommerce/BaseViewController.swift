@@ -1,14 +1,14 @@
 //
-//  BaseVC.swift
-//  CustomSideMenuiOSExample
+//  BaseViewController.swift
+//  ECommerce
 //
-//  Created by aditya sharma on 09/04/23.
+//  Created by aditya sharma on 13/08/23.
 //
 
 import UIKit
 
-class BaseVC: UIViewController {
-    static let shared = BaseVC()
+class BaseViewController: UIViewController {
+    static let shared = BaseViewController()
 //     var rightDrawerTransition: DrawerTransition!
     var userLoginStatus: Bool?
     override func viewDidLoad() {
@@ -16,9 +16,9 @@ class BaseVC: UIViewController {
         userLoginStatus = UserDefaults.standard.value(forKey: "isUserLoggedIn") as? Bool
 
         addMenuBarButton()
-        // Do any additional setup after loading the view. textsaf
+        // Do any additional setup after loading the view.
     }
-    
+
     func addMenuBarButton() {
         //Add SideMenu Button to the Navigation Bar
         let image = UIImage(named: "menu")
@@ -28,7 +28,7 @@ class BaseVC: UIViewController {
                                        action: #selector(leftButton))
         self.navigationItem.leftBarButtonItem = backItem
         self.navigationItem.leftBarButtonItem?.tintColor = UIColor.black
-        
+
         //Add Notification Icon to the Navigation Bar
         let bellImage = UIImage(systemName: "magnifyingglass")
         let bellBtn = UIBarButtonItem(image: bellImage,
@@ -38,7 +38,7 @@ class BaseVC: UIViewController {
         self.navigationItem.rightBarButtonItem = bellBtn
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.black
 //        title = ""
-        
+
         //Add Navigation Title
 //        let titleImage = UIImage(named: "logopng")
 //        let imageView = UIImageView(image: titleImage)
@@ -66,7 +66,7 @@ class BaseVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.rightBarButtonItem?.tintColor = UIColor.black
     }
-    
+
 
     //MARK: Notification Button Action
     @objc func leftButton() {
