@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		107DE14EA87275CFA2E947F3 /* Pods_ECommerce.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD82FB539FBB069BB650FB4B /* Pods_ECommerce.framework */; };
+		482C34CC2A89504800478293 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482C34C52A89504800478293 /* CategoryCell.swift */; };
+		482C34CD2A89504800478293 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482C34C62A89504800478293 /* ProfileViewController.swift */; };
+		482C34CE2A89504800478293 /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482C34C72A89504800478293 /* NotificationsViewController.swift */; };
+		482C34CF2A89504800478293 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482C34C82A89504800478293 /* BaseViewController.swift */; };
+		482C34D02A89504800478293 /* CEnumClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482C34C92A89504800478293 /* CEnumClass.swift */; };
+		482C34D12A89504800478293 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482C34CA2A89504800478293 /* HomeViewController.swift */; };
+		482C34D22A89504800478293 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482C34CB2A89504800478293 /* CartViewController.swift */; };
 		48EB4FB22A875A90009A0F5B /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB4FB12A875A90009A0F5B /* Utilities.swift */; };
 		48EB4FB82A87B43B009A0F5B /* KeychainServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48EB4FB72A87B43B009A0F5B /* KeychainServiceManager.swift */; };
 		E6DF688F2A823827006A925A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6DF688E2A823827006A925A /* AppDelegate.swift */; };
@@ -20,6 +27,13 @@
 
 /* Begin PBXFileReference section */
 		0BA3E70C6A097ECC809DB747 /* Pods-ECommerce.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerce.release.xcconfig"; path = "Target Support Files/Pods-ECommerce/Pods-ECommerce.release.xcconfig"; sourceTree = "<group>"; };
+		482C34C52A89504800478293 /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		482C34C62A89504800478293 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		482C34C72A89504800478293 /* NotificationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
+		482C34C82A89504800478293 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		482C34C92A89504800478293 /* CEnumClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CEnumClass.swift; sourceTree = "<group>"; };
+		482C34CA2A89504800478293 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		482C34CB2A89504800478293 /* CartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		48EB4FB12A875A90009A0F5B /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		48EB4FB72A87B43B009A0F5B /* KeychainServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainServiceManager.swift; sourceTree = "<group>"; };
 		95B01AFE17A31A7FFEA4C416 /* Pods-ECommerce.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ECommerce.debug.xcconfig"; path = "Target Support Files/Pods-ECommerce/Pods-ECommerce.debug.xcconfig"; sourceTree = "<group>"; };
@@ -96,6 +110,13 @@
 				E6DF688E2A823827006A925A /* AppDelegate.swift */,
 				E6DF68902A823827006A925A /* SceneDelegate.swift */,
 				E6DF68922A823827006A925A /* SignUpVC.swift */,
+				482C34C82A89504800478293 /* BaseViewController.swift */,
+				482C34CB2A89504800478293 /* CartViewController.swift */,
+				482C34C52A89504800478293 /* CategoryCell.swift */,
+				482C34C92A89504800478293 /* CEnumClass.swift */,
+				482C34CA2A89504800478293 /* HomeViewController.swift */,
+				482C34C72A89504800478293 /* NotificationsViewController.swift */,
+				482C34C62A89504800478293 /* ProfileViewController.swift */,
 				E6DF68942A823827006A925A /* Main.storyboard */,
 				E6DF68972A823829006A925A /* Assets.xcassets */,
 				E6DF68992A823829006A925A /* LaunchScreen.storyboard */,
@@ -224,7 +245,14 @@
 				E6DF688F2A823827006A925A /* AppDelegate.swift in Sources */,
 				48EB4FB22A875A90009A0F5B /* Utilities.swift in Sources */,
 				E6DF68912A823827006A925A /* SceneDelegate.swift in Sources */,
+				482C34D22A89504800478293 /* CartViewController.swift in Sources */,
+				482C34CD2A89504800478293 /* ProfileViewController.swift in Sources */,
+				482C34D02A89504800478293 /* CEnumClass.swift in Sources */,
+				482C34CF2A89504800478293 /* BaseViewController.swift in Sources */,
+				482C34D12A89504800478293 /* HomeViewController.swift in Sources */,
 				48EB4FB82A87B43B009A0F5B /* KeychainServiceManager.swift in Sources */,
+				482C34CC2A89504800478293 /* CategoryCell.swift in Sources */,
+				482C34CE2A89504800478293 /* NotificationsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
