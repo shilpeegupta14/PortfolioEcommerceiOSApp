@@ -16,7 +16,7 @@ class BaseVC: UIViewController {
         userLoginStatus = UserDefaults.standard.value(forKey: "isUserLoggedIn") as? Bool
 
         addMenuBarButton()
-        // Do any additional setup after loading the view. textsaf
+        // Do any additional setup after loading the view.
     }
     
     func addMenuBarButton() {
